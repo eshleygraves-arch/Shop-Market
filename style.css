@@ -1,0 +1,234 @@
+/* style.css */
+
+/* Базовые сбросы и общие настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Анимация мягкого плавного появления контента */
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    animation: fadeInPage 0.8s ease-out forwards;
+    padding: 5rem 2rem;
+    min-height: calc(100vh - 160px);
+    transition: background-color 0.5s ease;
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Навигационная панель (Header) */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+}
+
+.logo a {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #111111;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #555555;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Базовые стили для кнопок */
+.btn {
+    display: inline-block;
+    color: #ffffff;
+    padding: 0.9rem 2.2rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Подвал (Footer) */
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid #eeeeee;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #666666;
+}
+
+
+/* ====================================================
+   ИНДИВИДУАЛЬНЫЕ ЦВЕТА И СТИЛИ ДЛЯ КАЖДОЙ СТРАНИЦЫ
+==================================================== */
+
+/* --- 1. ГЛАВНАЯ СТРАНИЦА (Благородный Синий) --- */
+body.page-index main {
+    background-color: #f0f4f8; /* Очень мягкий голубой оттенок */
+}
+body.page-index .nav-menu a.active, 
+body.page-index .nav-menu a:hover { color: #0056b3; }
+body.page-index .btn { background-color: #0056b3; box-shadow: 0 4px 14px rgba(0, 86, 179, 0.2); }
+body.page-index .btn:hover { background-color: #003d82; box-shadow: 0 6px 20px rgba(0, 86, 179, 0.3); }
+body.page-index h1 { color: #003d82; }
+
+/* --- 2. ОБУВЬ (Свежий Зеленый) --- */
+body.page-shoes main {
+    background-color: #f1f9f3; /* Мягкий мятно-зеленый фон */
+}
+body.page-shoes .nav-menu a.active, 
+body.page-shoes .nav-menu a:hover { color: #1e7e34; }
+body.page-shoes .btn { background-color: #1e7e34; box-shadow: 0 4px 14px rgba(30, 126, 52, 0.2); }
+body.page-shoes .btn:hover { background-color: #125220; box-shadow: 0 6px 20px rgba(30, 126, 52, 0.3); }
+body.page-shoes .product-price { color: #1e7e34; }
+body.page-shoes .page-title { color: #125220; }
+
+/* --- 3. КАТЕГОРИИ (Глубокий Фиолетовый) --- */
+body.page-categories main {
+    background-color: #f6f2fc; /* Нежный лавандовый фон */
+}
+body.page-categories .nav-menu a.active, 
+body.page-categories .nav-menu a:hover { color: #6f42c1; }
+body.page-categories .btn { background-color: #6f42c1; box-shadow: 0 4px 14px rgba(111, 66, 193, 0.2); }
+body.page-categories .btn:hover { background-color: #49248f; box-shadow: 0 6px 20px rgba(111, 66, 193, 0.3); }
+body.page-categories .page-title { color: #49248f; }
+
+/* --- 4. КОРЗИНА (Энерничный Оранжевый) --- */
+body.page-cart main {
+    background-color: #fff8f2; /* Теплый персиковый фон */
+}
+body.page-cart .nav-menu a.active, 
+body.page-cart .nav-menu a:hover { color: #fd7e14; }
+body.page-cart .btn { background-color: #fd7e14; box-shadow: 0 4px 14px rgba(253, 126, 20, 0.2); }
+body.page-cart .btn:hover { background-color: #ca5f0a; box-shadow: 0 6px 20px rgba(253, 126, 20, 0.3); }
+body.page-cart .product-price, 
+body.page-cart .summary-total { color: #fd7e14; }
+body.page-cart .page-title { color: #ca5f0a; }
+
+/* --- 5. ТЕХ.ПОДДЕРЖКА (Спокойный Бирюзовый) --- */
+body.page-support main {
+    background-color: #f0fafd; /* Чистый бирюзовый оттенок */
+}
+body.page-support .nav-menu a.active, 
+body.page-support .nav-menu a:hover { color: #17a2b8; }
+body.page-support .btn { background-color: #17a2b8; box-shadow: 0 4px 14px rgba(23, 162, 184, 0.2); }
+body.page-support .btn:hover { background-color: #117a8b; box-shadow: 0 6px 20px rgba(23, 162, 184, 0.3); }
+body.page-support input:focus, 
+body.page-support textarea:focus, 
+body.page-support select:focus { border-color: #17a2b8; box-shadow: 0 0 8px rgba(23, 162, 184, 0.2); }
+body.page-support .page-title { color: #117a8b; }
+
+
+/* ====================================================
+   СТРУКТУРНЫЕ БЛОКИ И СЕТКИ СТРАНИЦ
+==================================================== */
+
+/* Главная страница */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.hero-text { flex: 1; }
+.hero-text h1 { font-size: 3rem; line-height: 1.2; margin-bottom: 1.5rem; font-weight: 800; }
+.hero-text p { font-size: 1.2rem; color: #444444; margin-bottom: 2rem; }
+.hero-image { flex: 1; }
+.hero-image img { width: 100%; border-radius: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.08); }
+
+/* Заголовки страниц каталогов */
+.page-title { font-size: 2.6rem; margin-bottom: 0.8rem; text-align: center; font-weight: 800; }
+.page-subtitle { text-align: center; color: #555555; margin-bottom: 4rem; max-width: 650px; margin-left: auto; margin-right: auto; font-size: 1.1rem; }
+
+/* Сетки товаров и категорий */
+.products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; }
+.product-card { background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.02); transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid rgba(0,0,0,0.03); }
+.product-card:hover { transform: translateY(-8px); box-shadow: 0 20px 35px rgba(0,0,0,0.07); }
+.product-card img { width: 100%; height: 260px; object-fit: cover; }
+.product-info { padding: 2rem; }
+.product-info h3 { margin-bottom: 0.6rem; font-size: 1.4rem; font-weight: 700; }
+.product-meta { font-size: 0.95rem; color: #666666; margin-bottom: 0.6rem; }
+.product-price { font-size: 1.3rem; font-weight: 700; margin-bottom: 1.2rem; }
+
+/* Корзина */
+.cart-container { display: flex; gap: 4rem; margin-top: 1rem; align-items: flex-start; }
+.cart-items { flex: 2; background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.02); }
+.cart-item { display: flex; align-items: center; gap: 2rem; padding: 2rem 0; border-bottom: 1px solid #eeeeee; }
+.cart-item:last-child { border-bottom: none; }
+.cart-item img { width: 110px; height: 110px; object-fit: cover; border-radius: 8px; }
+.cart-item-details { flex: 1; }
+.cart-item-details h3 { font-size: 1.25rem; margin-bottom: 0.4rem; }
+.cart-summary { flex: 1; background-color: #ffffff; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.02); position: sticky; top: 120px; }
+.cart-summary h2 { font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 2px solid #f5f5f5; padding-bottom: 0.5rem; }
+.summary-row { display: flex; justify-content: space-between; margin-bottom: 1.2rem; font-size: 1.1rem; color: #444444; }
+.summary-total { font-size: 1.5rem; font-weight: 800; border-top: 1px solid #eeeeee; padding-top: 1.2rem; margin-top: 1.2rem; }
+
+/* Техническая поддержка (Форма) */
+.support-container { max-width: 650px; margin: 0 auto; background: #ffffff; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.02); }
+.form-group { margin-bottom: 1.8rem; }
+.form-group label { display: block; margin-bottom: 0.6rem; font-weight: 600; font-size: 0.95rem; }
+.form-group input, .form-group textarea, .form-group select { width: 100%; padding: 0.9rem 1rem; border: 1px solid #dddddd; border-radius: 6px; font-size: 1rem; font-family: inherit; transition: all 0.3s ease; background-color: #fafafa; }
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; background-color: #ffffff; }
+
+/* Адаптивность под мобильные устройства */
+@media (max-width: 992px) {
+    .hero { flex-direction: column-reverse; text-align: center; gap: 3rem; }
+    .hero-text h1 { font-size: 2.4rem; }
+    .cart-container { flex-direction: column; }
+    .cart-items, .cart-summary { width: 100%; }
+}
+
+@media (max-width: 768px) {
+    .nav-container { flex-direction: column; gap: 1.2rem; padding: 1rem; }
+    .nav-menu { gap: 1rem; flex-wrap: wrap; justify-content: center; font-size: 0.95rem; }
+    main { padding: 3rem 1rem; }
+    .support-container { padding: 2rem 1.5rem; }
+}

@@ -1,0 +1,78 @@
+<!-- cart.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ваша корзина</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-cart">
+
+    <header>
+        <nav class="nav-container">
+            <div class="logo"><a href="index.html">SHOE.XYZ</a></div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="shoes.html">Обувь</a></li>
+                <li><a href="categories.html">Категории</a></li>
+                <li><a href="cart.html" class="active">Корзина</a></li>
+                <li><a href="support.html">Тех.поддержка</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            <h1 class="page-title">Ваша корзина покупок</h1>
+            <p class="page-subtitle">Проверьте выбранные товары перед покупкой. Вы заменяете неудобную обувь на настоящее качество!</p>
+
+            <div class="cart-container">
+                <!-- Список выбранного -->
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <img src="https://admin.di-sport.uz/storage/thumbnails/galleries/29118/xs8ovZFtNui6KC1rF9BQMQnArnf1ybvTZ1YaGuKK-medium.webp" alt="Выбранные кроссовки">
+                        <div class="cart-item-details">
+                            <h3>Кроссовки Аэроклима XL</h3>
+                            <p class="product-meta">Размер: 42 | Италия</p>
+                        </div>
+                        <div class="product-price">8 900 ₽</div>
+                    </div>
+
+                    <div class="cart-item">
+                        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRjF3F5IKIXMoVVD5tBCAjbxrUqzeEZ7uht4iZO1LK8nJ-Va-1BE4wA643L8LsmHKRTi7NxqadIyI8Y8vllzr1eFXh5FT2MxNEx-b9Wn1ULQRZLowm6RrVPkVsk1H_FYTS6aWSkjQ&usqp=CAc" alt="Выбранные туфли">
+                        <div class="cart-item-details">
+                            <h3>Оксфорды Премиум Кожа</h3>
+                            <p class="product-meta">Размер: 42 | Португалия</p>
+                        </div>
+                        <div class="product-price">13 500 ₽</div>
+                    </div>
+                </div>
+
+                <!-- Калькулятор общей стоимости -->
+                <div class="cart-summary">
+                    <h2>Ваш заказ</h2>
+                    <div class="summary-row">
+                        <span>Выбрано обуви:</span>
+                        <span>2 пары</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Доставка до локации:</span>
+                        <span>Бесплатно</span>
+                    </div>
+                    <div class="summary-row summary-total">
+                        <span>Общая цена:</span>
+                        <span>22 400 ₽</span>
+                    </div>
+                    <button class="btn" style="width: 100%; text-align: center; margin-top: 1rem;">Купить качественную обувь</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SHOE.XYZ — Проект для презентации на Demo Day. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
